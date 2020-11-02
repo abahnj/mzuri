@@ -97,7 +97,7 @@ class _BusinessDetailsFormState extends State<BusinessDetailsForm> {
             init: 'Boldseams Stitches',
             enabled: widget.enabled.value,
           ),
-          spacerH32,
+          /*spacerH32,
           if (widget.enabled.value)
             TextField(
               decoration: InputDecoration(
@@ -116,6 +116,32 @@ class _BusinessDetailsFormState extends State<BusinessDetailsForm> {
                 ),
                 isDense: true,
                 enabled: widget.enabled.value,
+              ),
+            ),*/
+          if (widget.enabled.value) spacerH32,
+          if (widget.enabled.value)
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 75,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/image_outline.png',
+                        height: 32,
+                        width: 32,
+                      ),
+                      SizedBox(width: 10),
+                      Text('Upload your company logo')
+                    ],
+                  ),
+                ),
               ),
             ),
           if (widget.enabled.value) spacerH32,
